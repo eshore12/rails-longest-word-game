@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<% if @result == false %>
+<p> Sorry, can't be built out of the grid</p>
+<% elsif @found %>
+<p>Congratulations! Valid English word!</p>
+<h3>Your Score: <%= @word.length * 10 %></h3>
+<% else %>
+<p>Not a valid English word</p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
+
